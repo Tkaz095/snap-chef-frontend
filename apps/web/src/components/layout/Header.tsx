@@ -48,14 +48,17 @@ export default function Header() {
             
             {isAuthenticated && (
               <>
-                <Button variant={isActive('/profile') ? 'secondary' : 'ghost'} asChild>
-                  <Link to="/profile">My Recipes</Link>
+                <Button variant={isActive('/dashboard') ? 'secondary' : 'ghost'} asChild>
+                  <Link to="/dashboard">Dashboard</Link>
+                </Button>
+                <Button variant={isActive('/my-recipes') ? 'secondary' : 'ghost'} asChild>
+                  <Link to="/my-recipes">My Recipes</Link>
                 </Button>
                 
                 {/* Optional chaining (?.) để tránh lỗi nếu user null */}
                 {user?.role === 'moderator' && (
-                  <Button variant={isActive('/admin') ? 'secondary' : 'ghost'} asChild>
-                    <Link to="/admin">Moderation</Link>
+                  <Button variant={isActive('/moderation') ? 'secondary' : 'ghost'} asChild>
+                    <Link to="/moderation">Moderation</Link>
                   </Button>
                 )}
               </>
