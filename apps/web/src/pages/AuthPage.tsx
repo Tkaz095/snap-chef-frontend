@@ -1,6 +1,6 @@
 import LoginForm from '@/features/auth/components/LoginForm';
 import RegisterForm from '@/features/auth/components/RegisterForm';
-import { useLocation, Navigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react'; // Thêm hook này
 
 export default function AuthPage() {

@@ -53,7 +53,7 @@ export function useRecipeActions() {
     setError(null);
     try {
       const response = await api.post<{ recipe: Recipe }>(`/recipes/${recipeId}/fork`, modifications);
-      return response.data.recipe;
+      return response.recipe;
     } catch (err: any) {
       setError(err.response?.data?.message || 'Failed to fork recipe');
       return null;

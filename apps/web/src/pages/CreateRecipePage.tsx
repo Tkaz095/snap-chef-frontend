@@ -1,6 +1,6 @@
 import { FormProvider, useForm, useFieldArray, useFormContext } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
-import { Plus, Trash2, ChefHat, ImageIcon, Camera, X, Lock, Globe } from 'lucide-react';
+import { Plus, Trash2, ChefHat, Camera, X, Lock, Globe } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { uploadToCloudinary } from '@/services/cloudinaryService';
