@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Search, SlidersHorizontal, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import RecipeCard from './RecipeCard';
 import Loading from '@/components/common/Loading';
@@ -15,12 +14,11 @@ interface RecipeListProps {
   featured?: boolean;
 }
 
-export default function RecipeList({ userId, status, featured }: RecipeListProps) {
+export default function RecipeList({ userId,}: RecipeListProps) {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [showFilters, setShowFilters] = useState(false);
   
   // State lưu toàn bộ dữ liệu gốc lấy từ Mock
   const [allRecipes, setAllRecipes] = useState<Recipe[]>([]); 

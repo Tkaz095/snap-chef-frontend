@@ -11,7 +11,7 @@ export function useModeration() {
     setError(null);
     try {
       const response = await api.get<{ data: ModerationQueue[] }>('/moderation/queue');
-      return response.data.data;
+      return response.data;
     } catch (err: any) {
       setError(err.response?.data?.message || 'Failed to fetch moderation queue');
       return null;

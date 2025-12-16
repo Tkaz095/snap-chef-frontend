@@ -24,7 +24,7 @@ export default function RecipeDetailPage() {
     setError(null);
     try {
       const response = await api.get<{ recipe: Recipe }>(`/recipes/${id}`);
-      setRecipe(response.data.recipe);
+      setRecipe(response.recipe);
     } catch (err: any) {
       setError(err.response?.data?.message || 'Failed to load recipe');
     } finally {
